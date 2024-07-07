@@ -7,17 +7,17 @@ name: Docker ghcr.io
 
 on:
   push:
-    branches: [main]
+    branches: [custom]
     # Publish semver tags as releases.
     tags: ["v*.*.*"]
   pull_request:
-    branches: [main]
+    branches: [custom]
 
 env:
   # Use docker.io for Docker Hub if empty
-  REGISTRY: ghcr.io
+  REGISTRY: connorshen
   # github.repository as <account>/<repo>
-  IMAGE_NAME: ${{ github.repository }}
+  IMAGE_NAME: notionnext
 
 jobs:
   build:
